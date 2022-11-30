@@ -117,7 +117,7 @@
         <Button Canvas.Bottom="100" Canvas.Right="100">Button 6</Button>
     </Canvas>-->
 
-    <!--<Grid>
+    <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="30"/>
             <RowDefinition Height="0.1*"/>
@@ -162,8 +162,8 @@
         <Button Content="  Menu  " Grid.Row="0" HorizontalAlignment="Left" Background="White" BorderThickness="0"/>
         <Label Content="Standart" HorizontalAlignment="Left" Grid.Row="0" FontSize ="15" Margin="51,0,0,1"/>
         <Button Content="H" Grid.Row="0" HorizontalAlignment="Right" Width="30" Background="White" BorderThickness="0"/>
-    </Grid>-->
-    <Grid>
+    </Grid>
+    <!--<Grid>-->
         <!--<Image Margin="10" 
                Source="C:\Users\golol\Downloads\Mole.png"
                Stretch="UniformToFill" />-->
@@ -237,7 +237,7 @@
 
          </TreeView>-->
 
-        <Grid.ColumnDefinitions>
+        <!--<Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition Width="Auto"/>
             <ColumnDefinition/>
@@ -251,8 +251,8 @@
         <Border Background="Bisque" Grid.Row="0" Grid.Column="2" />
         <Border Background="Tomato" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3"/>
         <GridSplitter  Background="Blue" Width="3" Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" HorizontalAlignment="Stretch"/>
-        <GridSplitter Height="3" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" HorizontalAlignment="Stretch"/>
+        <GridSplitter Height="3" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" HorizontalAlignment="Stretch"/>-->
 
-    </Grid>
+    <!--</Grid>-->
 
 </Window>
