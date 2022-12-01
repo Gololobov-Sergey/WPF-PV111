@@ -54,11 +54,57 @@ namespace WPF_PV111
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            
             var b = (Button)sender;
             b.FontSize = 20;
-            b.Content = move? "X" : "0";
+            b.Content = move ? "X" : "0";
             move = !move;
             b.IsEnabled = false;
+        }
+
+        //private void Window_SizeChanged(object sender, SizeChangedEventArgs e)
+        //{
+
+        //    LeftPanel.Visibility = (Width > 500) ? Visibility.Visible : Visibility.Collapsed;
+
+        //}
+
+        //private void _MouseDown(object sender, MouseButtonEventArgs e)
+        //{
+            
+        //    txt1.Text = txt1.Text + " sender: " + sender.ToString() +"\n";
+        //    txt1.Text += "source: " + e.Source.ToString()+ "\n\n";
+        //}
+
+        //private void RepeatButton_Click(object sender, RoutedEventArgs e)
+        //{
+        //    txt1.Text += "D";
+        //}
+
+        private void TextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            txtBlock.Text += e.Key.ToString();
+
+            
+        }
+
+        private void Window_KeyDown(object sender, KeyEventArgs e)
+        {
+            if ((e.KeyboardDevice.Modifiers & ModifierKeys.Control) == ModifierKeys.Control &&
+                (e.KeyboardDevice.Modifiers & ModifierKeys.Alt) == ModifierKeys.Alt &&
+                e.Key == Key.P)
+            {
+                MessageBox.Show("Print");
+            }
+        }
+
+        private void StackPanel_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            txtBlock.Text += e.ChangedButton.ToString();
+            //if(e.ChangedButton == MouseButton.XButton1)
+            //{
+            //    MessageBox.Show("X1");
+            //}
         }
     }
 }

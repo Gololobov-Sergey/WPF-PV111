@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_PV111"
         mc:Ignorable="d"
-        Title="MainWindow" Height="250" Width="250" WindowStartupLocation="CenterScreen">
+        Title="MainWindow" Height="400" Width="250" WindowStartupLocation="CenterScreen"
+        KeyDown="Window_KeyDown">
     <!--<Grid>
         <StackPanel Orientation="Vertical">
             <Button Content="1" />
@@ -117,13 +118,23 @@
         <Button Canvas.Bottom="100" Canvas.Right="100">Button 6</Button>
     </Canvas>-->
 
-    <Grid>
+    <!--<Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="30"/>
             <RowDefinition Height="0.1*"/>
-            <RowDefinition Height="0.02*"/>
-            <RowDefinition Height="0.32*"/>
+            <RowDefinition Height="0.02*" MinHeight="30"/>
+            <RowDefinition Height="0.32*" />
         </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel x:Name="LeftPanel" Grid.Column="1" Grid.RowSpan="4" Width="200" Visibility="Collapsed">
+            <StackPanel Orientation="Horizontal">
+                <Button>Stats</Button>
+                <Button>History</Button>
+            </StackPanel>
+        </StackPanel>
         <UniformGrid Grid.Row="3" Columns="4">
             <Button Margin="2" Content="%"   FontSize="20"/>
             <Button Margin="2" Content="CE"    FontSize="20"/>
@@ -131,7 +142,7 @@
             <Button Margin="2" Content="&lt;x|"    FontSize="20"/>
             <Button Margin="2" Content="1/x"   FontSize="20"/>
             <Button Margin="2" Content="pow(x,2)"    FontSize="20"/>
-            <Button Margin="2" Content="sqrt(x)"    FontSize="20"/>
+            <Button Margin="2" Content="√"    FontSize="20"/>
             <Button Margin="2" Content="/"    FontSize="20"/>
             <Button Margin="2" Content="7"    FontSize="20"/>
             <Button Margin="2" Content="8"    FontSize="20"/>
@@ -162,7 +173,7 @@
         <Button Content="  Menu  " Grid.Row="0" HorizontalAlignment="Left" Background="White" BorderThickness="0"/>
         <Label Content="Standart" HorizontalAlignment="Left" Grid.Row="0" FontSize ="15" Margin="51,0,0,1"/>
         <Button Content="H" Grid.Row="0" HorizontalAlignment="Right" Width="30" Background="White" BorderThickness="0"/>
-    </Grid>
+    </Grid>-->
     <!--<Grid>-->
         <!--<Image Margin="10" 
                Source="C:\Users\golol\Downloads\Mole.png"
@@ -254,5 +265,26 @@
         <GridSplitter Height="3" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" HorizontalAlignment="Stretch"/>-->
 
     <!--</Grid>-->
+
+    <!--<Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Background="Aqua" Grid.Column="0" VerticalAlignment="Center"  MouseDown="_MouseDown">
+            <Button Width="100" Height="50" MouseDown="_MouseDown" >
+                <Rectangle Width="50" Height="30" Fill="Red" MouseDown="_MouseDown" />
+            </Button>
+        </StackPanel>
+        <TextBlock x:Name="txt1" Grid.Column="1" />
+        --><!--<ToggleButton  ></ToggleButton>--><!--
+        <RepeatButton Delay="1000" Interval="200" Click="RepeatButton_Click"/>
+    </Grid>-->
+    <StackPanel Background="Aqua" Orientation="Vertical" MouseDown="StackPanel_MouseDown">
+        <TextBox Height="100" KeyDown="TextBox_KeyDown"/>
+        <TextBlock x:Name="txtBlock" Height="100"/>
+    </StackPanel>
+
+    
 
 </Window>
